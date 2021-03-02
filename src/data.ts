@@ -28,8 +28,7 @@ export const data = {
       name: "ELAN",
       homepage: "https://elanberlin.com",
       github: "https://github.com/maltebaer/elan",
-      descripton:
-        "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.",
+      description: "Portfolio website of a Berlin-based event agency.",
       technologies: ["React", "TypeScript", "Bootstrap"],
       preview: "/elan.png",
     },
@@ -37,8 +36,8 @@ export const data = {
       name: "Game of Life",
       homepage: "https://maltebaer.github.io/game-of-life/",
       github: "https://github.com/maltebaer/game-of-life",
-      descripton:
-        "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.",
+      description:
+        "Arcade game using Conway's 'Game of Life' for creating a space inspired landscape. First JavaScript project and entrypoint into Web Development.",
       technologies: ["JavaScript", "HTML", "CSS"],
       preview: "/game-of-life.png",
     },
@@ -46,8 +45,7 @@ export const data = {
       name: "Momo",
       homepage: "https://momo.maltebaer.now.sh/",
       github: "https://github.com/maltebaer/momo",
-      descripton:
-        "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.",
+      description: "Welcome/announcement page for my son's birthday.",
       technologies: ["React", "TypeScript", "TailwindCSS"],
       preview: "/momo.png",
     },
@@ -55,8 +53,8 @@ export const data = {
       name: "Blog",
       homepage: "https://til.maltebaer.now.sh/",
       github: "https://github.com/maltebaer/til",
-      descripton:
-        "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.",
+      description:
+        "Collection of my learnings, ideas and AHA moments while coding.",
       technologies: ["Next", "TypeScript", "TailwindCSS"],
       preview: "/blog.png",
     },
@@ -67,7 +65,7 @@ export const data = {
       company: "LUM GmbH",
       homepage: "https://lum-gmbh.com/",
       description:
-        "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.",
+        "Realise software for recording, managing and analysing measurements with focus on displaying complex visualisations and creating a scientific UX.",
       start: new Date(2019, 7),
       end: undefined,
     },
@@ -75,8 +73,7 @@ export const data = {
       role: "Frontend Developer",
       company: "INTEGR8",
       homepage: "https://www.integr8.com/",
-      description:
-        "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.",
+      description: "Setup up a small, in-house reporting app.",
       start: new Date(2019, 2),
       end: new Date(2019, 6),
     },
@@ -85,7 +82,7 @@ export const data = {
       company: "INTEGR8",
       homepage: "https://www.integr8.com/",
       description:
-        "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.",
+        "Established the IT infrastructure, supporting the agency growing from 15 employees to 50+ employees. Created the on- and offboarding process, helping new employees collaborating with the team.",
       start: new Date(2017, 4),
       end: new Date(2019, 2),
     },
@@ -97,7 +94,7 @@ export const data = {
       location: "Ironhack Berlin",
       homepage: "https://www.ironhack.com/en/berlin",
       description:
-        "Intensive 9-week courses in Web Development with the following technologies: MERN Stack, JavaScript, HTML and CSS.",
+        "Intensive 9-week courses in Web Development including: MERN Stack, JavaScript, HTML and CSS.",
       start: new Date(2019, 0),
       end: new Date(2019, 2),
     },
@@ -106,8 +103,6 @@ export const data = {
       field: "Engineering",
       location: "TU Berlin",
       homepage: "https://www.tu.berlin/",
-      description:
-        "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.",
       start: new Date(2016, 3),
       end: undefined,
     },
@@ -117,7 +112,7 @@ export const data = {
       location: "TU Berlin",
       homepage: "https://www.tu.berlin/",
       description:
-        "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.",
+        "Thesis: 'Calculation of phase diagrams for active fluids' at the Department of Theoretical Physics",
       start: new Date(2012, 3),
       end: new Date(2016, 2),
     },

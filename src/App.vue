@@ -13,7 +13,7 @@
             :src="data.main.imgUrl"
             :alt="data.main.name"
           />
-          <h1 class="absolute bottom-0 m-4 text-4xl text-gray-50">
+          <h1 class="absolute bottom-0 m-4 text-4xl text-white">
             {{ data.main.name }}
           </h1>
         </div>
@@ -55,8 +55,9 @@
             </h3>
             <ul class="mt-4 flex flex-wrap">
               <li
-                class="bg-blue-600 px-2 mr-1 my-1 rounded-lg text-gray-50 font-semibold"
+                class="border border-blue-600 px-2 mr-1 my-1 rounded-lg text-blue-600 font-semibold cursor-default hover:bg-blue-600 hover:text-white"
                 v-for="skill in shuffle(data.skills)"
+                :key="skill"
               >
                 {{ skill }}
               </li>
@@ -68,20 +69,38 @@
               <span>Languages</span>
             </h3>
             <ul class="mt-4 space-y-4">
-              <li class="grid grid-cols-3" v-for="language in data.languages">
+              <li
+                class="grid grid-cols-3"
+                v-for="language in data.languages"
+                :key="language"
+              >
                 <span>
                   {{ language.language }}
                 </span>
                 <div class="col-span-2 flex justify-between">
                   <div
-                    class="w-8 h-6 rounded bg-blue-600 border-2 border-blue-700 hover:animate-wiggle"
+                    class="w-6 h-6 rounded-full border-2 border-blue-700 hover:bg-blue-600"
                     v-for="n in language.level"
+                    :key="n"
                   />
                   <div
-                    class="w-8 h-6 rounded bg-blue-200 border-2 border-blue-500 hover:animate-wiggle"
+                    class="w-6 h-6 rounded-full border-2 border-blue-500 hover:bg-blue-200"
                     v-for="n in 5 - language.level"
+                    :key="n + language.level"
                   />
                 </div>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="flex space-x-4 text-xl font-semibold">
+              <PresentationChartIcon class="w-6 h-6 text-blue-500 stroke-2" />
+              <span>Projects</span>
+            </h3>
+            <ul class="mt-4 space-y-4">
+              <li v-for="project in data.projects" :key="project.name">
+                <ProjectCard :project="project" />
               </li>
             </ul>
           </div>
@@ -93,33 +112,39 @@
           <CodeIcon class="w-8 h-8 text-blue-500 stroke-2" />
           <span>Work Experience</span>
         </h2>
-        <ul class="divide-y">
-          <li class="py-4" v-for="work in data.workExperience">
+        <ul>
+          <li
+            class="py-4"
+            v-for="work in data.workExperience"
+            :key="work.start"
+          >
             <h3 class="text-xl font-semibold text-gray-500">{{ work.role }}</h3>
-            <a class="text-lg text-blue-700" :href="work.homepage">{{
-              work.company
-            }}</a>
-            <div class="flex items-center">
-              <CalendarIcon class="w-5 h-5 text-blue-500 stroke-2" />
-              <span class="ml-2 text-blue-500"
-                >{{
-                  work.start.toLocaleDateString("en-GB", {
-                    year: "numeric",
-                    month: "long",
-                  })
-                }}
-                -
-                {{
-                  work.end
-                    ? work.end.toLocaleDateString("en-GB", {
-                        year: "numeric",
-                        month: "long",
-                      })
-                    : "Present"
-                }}</span
-              >
+            <div class="flex divide-x-2">
+              <a class="pr-4 text-lg text-blue-700" :href="work.homepage">{{
+                work.company
+              }}</a>
+              <div class="pl-4 flex items-center">
+                <CalendarIcon class="w-5 h-5 text-blue-500 stroke-2" />
+                <span class="ml-2 text-blue-500"
+                  >{{
+                    work.start.toLocaleDateString("en-GB", {
+                      year: "numeric",
+                      month: "long",
+                    })
+                  }}
+                  -
+                  {{
+                    work.end
+                      ? work.end.toLocaleDateString("en-GB", {
+                          year: "numeric",
+                          month: "long",
+                        })
+                      : "Present"
+                  }}</span
+                >
+              </div>
             </div>
-            <p class="mt-2 text-gray-800">{{ work.description }}</p>
+            <p class="mt-2 text-black">{{ work.description }}</p>
           </li>
         </ul>
       </section>
@@ -129,35 +154,43 @@
           <AcademicCapIcon class="w-8 h-8 text-blue-500 stroke-2" />
           <span>Education</span>
         </h2>
-        <ul class="divide-y">
-          <li class="py-4" v-for="stop in data.education">
+        <ul>
+          <li
+            class="py-4"
+            v-for="station in data.education"
+            :key="station.start"
+          >
             <h3 class="text-xl font-semibold text-gray-500">
-              {{ stop.degree }}
+              {{ station.degree }}, {{ station.field }}
             </h3>
-            <a class="text-lg text-blue-700" :href="stop.homepage">{{
-              stop.location
-            }}</a>
-            <div class="flex items-center">
-              <CalendarIcon class="w-5 h-5 text-blue-500 stroke-2" />
-              <span class="ml-2 text-blue-500"
-                >{{
-                  stop.start.toLocaleDateString("en-GB", {
-                    year: "numeric",
-                    month: "long",
-                  })
-                }}
-                -
-                {{
-                  stop.end
-                    ? stop.end.toLocaleDateString("en-GB", {
-                        year: "numeric",
-                        month: "long",
-                      })
-                    : "Stopped"
-                }}</span
-              >
+            <div class="flex divide-x-2">
+              <a class="pr-4 text-lg text-blue-700" :href="station.homepage">{{
+                station.location
+              }}</a>
+              <div class="pl-4 flex items-center">
+                <CalendarIcon class="w-5 h-5 text-blue-500 stroke-2" />
+                <span class="ml-2 text-blue-500"
+                  >{{
+                    station.start.toLocaleDateString("en-GB", {
+                      year: "numeric",
+                      month: "long",
+                    })
+                  }}
+                  -
+                  {{
+                    station.end
+                      ? station.end.toLocaleDateString("en-GB", {
+                          year: "numeric",
+                          month: "long",
+                        })
+                      : "Stopped"
+                  }}</span
+                >
+              </div>
             </div>
-            <p class="mt-2 text-gray-800">{{ stop.description }}</p>
+            <p :v-if="station.description" class="mt-2 text-black">
+              {{ station.description }}
+            </p>
           </li>
         </ul>
       </section>
