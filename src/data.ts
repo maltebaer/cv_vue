@@ -112,7 +112,7 @@ export const data = {
       location: "TU Berlin",
       homepage: "https://www.tu.berlin/",
       description:
-        "Thesis: 'Calculation of phase diagrams for active fluids' at the Department of Theoretical Physics",
+        "Thesis: 'Calculation of phase diagrams for active fluids' at the Department of Theoretical Physics.",
       start: new Date(2012, 3),
       end: new Date(2016, 2),
     },

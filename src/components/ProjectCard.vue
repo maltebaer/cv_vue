@@ -1,9 +1,7 @@
 <template>
-  <a :href="homepage" target="_blank">
-    <h3 class="text-xl font-semibold text-gray-500 flex items-center space-x-2">
-      <span>{{ name }}</span>
-    </h3>
-  </a>
+  <h3 class="text-xl font-semibold text-gray-500 flex items-center space-x-2">
+    <span>{{ name }}</span>
+  </h3>
   <ul class="mt-2 flex flex-wrap items-center">
     <li class="pr-2">
       <a :href="github" target="_blank">
@@ -18,7 +16,9 @@
       {{ tool }}
     </li>
   </ul>
-  <img class="mt-2 border" :src="preview" :alt="name" />
+  <a :href="homepage" target="_blank">
+    <img class="mt-2 border" :src="preview" :alt="name" />
+  </a>
   <p class="mt-2">{{ description }}</p>
 </template>
 
