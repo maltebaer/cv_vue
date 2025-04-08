@@ -1,7 +1,7 @@
 export const data = {
   main: {
     name: "Malte Bär",
-    imgUrl: "/malte.jpg",
+    imgUrl: "/malte.png",
     profession: "Software Developer",
     location: "Berlin, Germany",
     mail: "maltebaer@posteo.de",
